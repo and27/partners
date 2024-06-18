@@ -6,7 +6,7 @@ const Scurve = () => {
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10">
         <div className="relative">
           <Image
-            src="../person-computer.jpg"
+            src="/person-computer.jpg"
             alt="Next.js logo"
             fill
             className="object-cover w-full h-full rounded-lg shadow-lg"
