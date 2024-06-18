@@ -1,3 +1,4 @@
+import Benefits from "@/modules/benefits";
 import Image from "next/image";
 
 export default function Home() {
@@ -79,6 +80,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <Benefits />
     </>
   );
 }
