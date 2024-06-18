@@ -1,4 +1,5 @@
 import Benefits from "@/modules/benefits";
+import Footer from "@/modules/footer";
 import Scurve from "@/modules/scurve";
 import Image from "next/image";
 
@@ -83,6 +84,7 @@ export default function Home() {
       </main>
       <Benefits />
       <Scurve />
+      <Footer />
     </>
   );
 }
