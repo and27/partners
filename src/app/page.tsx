@@ -3,8 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <nav className="bg-neutral-200"></nav>
-      <main className="bg-neutral-200 text-neutral-800 relative">
+      <main className="bg-neutral-200 text-neutral-800 relative p-5">
         <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 items-center h-screen gap-5">
           <div className="flex flex-col gap-5">
             <Image
@@ -21,12 +20,15 @@ export default function Home() {
               jóvenes profesionales que comparten tu pasión por la innovación y
               el emprendimiento.
             </p>
-            <button
+            <a
+              href="https://forms.gle/S3GReHpDV9CnpxLk6"
+              target="_blank"
+              rel="noreferrer"
               className="text-white px-5 py-3 rounded text-lg font-semibold w-fit bg-blue-600 
              hover:bg-blue-800 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               ¡Quiero Empezar!
-            </button>
+            </a>
           </div>
           <div className="hidden md:block absolute w-1/2 h-full -right-10 bg-gradient-to-r from-blue-600 to-violet-600">
             <Image
