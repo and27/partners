@@ -2,20 +2,21 @@ import Image from "next/image";
 
 const benefits = [
   {
-    title: "Conecta",
+    title: "Explora conexiones",
     description:
-      "Encuentra a jóvenes profesionales con habilidades complementarias a las tuyas.",
+      "Encuentra profesionales con habilidades complementarias y forma tu equipo soñado.",
     image: "/ben3.jpg",
   },
   {
-    title: "Colabora",
-    description: "Trabaja en equipo para llevar a cabo tu idea innovadora.",
+    title: "Crea y Colabora",
+    description:
+      "Trabaja en proyectos que cambian el juego y lleva tus ideas más lejos con el apoyo del equipo correcto.",
     image: "/ben2.jpg",
   },
   {
-    title: "Crea",
+    title: "Innova sin Límites",
     description:
-      "Haz realidad tu idea y conviértete en un emprendedor exitoso.",
+      "Tus ideas no tienen límites, y con el equipo adecuado, todo es posible.",
     image: "/ben1.jpg",
   },
 ];
