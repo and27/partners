@@ -24,7 +24,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
           {Array(5)
             .fill(0)
             .map((_, i) => (
-              <Star className="ml-[1px]" />
+              <Star className="ml-[1px]" key={i} />
             ))}
         </div>
       </div>
