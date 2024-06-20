@@ -20,7 +20,7 @@ const Scurve = () => {
             trabajar en equipo y llevar a cabo tu idea innovadora. ¡Es muy
             sencillo!
           </p>
-          <ul className="list-disc list-inside">
+          <ol className="list-decimal list-inside">
             <li>Regístrate en Partners.</li>
             <li>Publica tu idea innovadora.</li>
             <li>
@@ -31,7 +31,7 @@ const Scurve = () => {
             <li>
               Haz realidad tu idea y conviértete en un emprendedor exitoso.
             </li>
-          </ul>
+          </ol>
         </div>
       </div>
     </section>
