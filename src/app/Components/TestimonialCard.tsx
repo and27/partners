@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Star } from "./Star";
 
 interface TestimonialCardProps {
   testimonial: {
@@ -23,21 +24,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
           {Array(5)
             .fill(0)
             .map((_, i) => (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-3 w-3 text-yellow-600"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                key={i}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={3}
-                  d="M12 10v7m0 0v7m0-7h7m-7 0H5"
-                />
-              </svg>
+              <Star className="ml-[1px]" />
             ))}
         </div>
       </div>
