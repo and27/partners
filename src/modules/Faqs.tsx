@@ -12,6 +12,11 @@ const topics = [
     description:
       "Nuestra comunidad incluye emprendedores de todo tipo de industrias, desde tecnología hasta salud, todos buscando socios estratégicos para llevar sus ideas al siguiente nivel.",
   },
+  {
+    title: "¿Cómo funciona el proceso de emparejamiento?",
+    description:
+      "El proceso de emparejamiento utiliza un algoritmo de matchmaking que toma en cuenta tus habilidades, necesidades y objetivos para encontrar el socio más adecuado para ti.",
+  },
 ];
 
 const Faqs = () => {
