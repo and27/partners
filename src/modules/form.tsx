@@ -1,75 +1,68 @@
-export default function Form() {
+"use client";
+
+import Step1 from "@/app/Components/form/Step1";
+import Step2 from "@/app/Components/form/Step2";
+import Step3 from "@/app/Components/form/Step3";
+import ProgressDots from "@/app/Components/ProgressDots";
+import Link from "next/link";
+import { useState } from "react";
+
+interface FormData {
+  name: string;
+  email: string;
+  projectStage: string;
+  supportType: string;
+}
+
+export default function Home() {
+  const [step, setStep] = useState<number>(1);
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    projectStage: "",
+    supportType: "",
+  });
+
+  const handleNextStep = (data: Partial<FormData>) => {
+    setFormData((prev) => ({ ...prev, ...data }));
+    setStep((prevStep) => prevStep + 1);
+  };
+
+  const handlePreviousStep = () => {
+    setStep((prevStep) => Math.max(prevStep - 1, 1));
+  };
+
   return (
-    <div className=" min-h-screen bg-gray-100 bg-neutral-200 ">
-      <div className="text-neutral-800 p-5 pt-[4rem] pb-[8rem] max-w-[50%] mx-auto flex flex-col items-center gap-5 text-center">
-        <p className="text-black text-lg font-semibold  px-3 py-1 rounded-lg tracking-widest text-center">
-          PARTNERS
-        </p>
-        <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md ">
-          <h2 className="text-2xl font-bold mb-6 text-center text-neutral-900 mb-10">
-            Encuentra a tu socio ideal llenando el siguiente formulario
-          </h2>
-
-          <form className="space-y-4">
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Nombre
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                required
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Correo Electrónico
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                required
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="business"
-                className="block text-sm font-medium text-gray-700"
-              >
-                ¿Cuál es tu negocio o proyecto?
-              </label>
-              <input
-                type="text"
-                id="business"
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                required
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200"
+    <div className="flex justify-center flex-col items-center min-h-screen bg-gray-50">
+      <p className="text-blue-700 text-lg font-semibold px-3 py-1 rounded-lg tracking-widest mb-5">
+        PARTNERS
+      </p>
+      <div className="flex flex-col bg-white p-8 rounded-xl shadow-xl w-full max-w-lg h-[55vh] overflow-y-auto">
+        {step < 4 && <ProgressDots currentStep={step} />}
+        {step === 1 && <Step1 onNext={handleNextStep} />}
+        {step === 2 && (
+          <Step2 onNext={handleNextStep} onBack={handlePreviousStep} />
+        )}
+        {step === 3 && (
+          <Step3 onNext={handleNextStep} onBack={handlePreviousStep} />
+        )}
+        {step > 3 && (
+          <div className="text-center">
+            <h1 className="text-xl font-semibold text-gray-800 mb-8">
+              ¡Gracias por completar el formulario!
+            </h1>
+            <p className="text-gray-600 mb-10">
+              Hemos recibido tu información y nos pondremos en contacto contigo
+              en breve.
+            </p>
+            <Link
+              href="/"
+              className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200"
             >
-              Enviar
-            </button>
-          </form>
-
-          <p className="mt-6 text-center text-sm text-gray-500">
-            ¡Gracias por completar el formulario! Estamos revisando tus
-            respuestas y pronto te contactaremos para presentarte a tu socio
-            ideal. ¡Mantente atento, estamos emocionados de conectar contigo!
-          </p>
-        </div>
+              Ir a la página de inicio
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
