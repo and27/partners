@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const CtaModule = () => {
   return (
@@ -28,15 +29,13 @@ const CtaModule = () => {
             Únete a Partners y comienza a construir el futuro de tu
             emprendimiento hoy.
           </p>
-          <a
-            href="https://forms.gle/S3GReHpDV9CnpxLk6"
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            href="/register"
             className="mt-5 text-white px-5 py-3 rounded-lg text-lg font-semibold bg-blue-700  w-max
              hover:bg-blue-800 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             Empezar ahora
-          </a>
+          </Link>
         </div>
       </div>
     </section>
