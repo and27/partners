@@ -5,6 +5,7 @@ import Footer from "@/modules/footer";
 import Hero from "@/modules/Hero";
 import Testimonials from "@/modules/Testimonials";
 import Link from "next/link";
+import DynamicWords from "./Components/DynamicWords";
 
 export default function Home() {
   return (
@@ -18,19 +19,20 @@ export default function Home() {
           }}
         ></div>
         <div className="relative max-w-[1280px] mx-auto h-screen flex flex-col justify-center items-center gap-5 text-center z-10">
-          <p className="text-white text-lg font-semibold  px-3 py-1 rounded-lg tracking-widest">
+          <p className="text-white text-lg font-semibold px-3 py-1 rounded-lg tracking-widest">
             PARTNERS
           </p>
 
-          <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-lg leading-tight">
-            Encuentra tu <span className="text-blue-500">socio ideal.</span>
+          <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-lg leading-snug tracking-tight">
+            Encuentra al <br />
+            socio ideal para tu
             <br />
-            Impulsa tu emprendimiento.
+            <DynamicWords />
           </h1>
 
           <Link
             href="/register"
-            className="mt-5 text-white px-5 py-3 rounded-lg text-lg font-semibold bg-blue-700 
+            className="mt-5 text-white px-7 py-3 rounded-lg text-lg font-semibold bg-blue-700 
              hover:bg-blue-800 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             Haz Match Ahora
