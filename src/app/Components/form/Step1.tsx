@@ -2,9 +2,10 @@ import { useState } from "react";
 
 interface Step1Props {
   onNext: (data: { name: string; email: string }) => void;
+  onBack: () => void;
 }
 
-const Step1: React.FC<Step1Props> = ({ onNext }) => {
+const Step1: React.FC<Step1Props> = ({ onNext, onBack }) => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
 
@@ -21,7 +22,7 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
       <div className="flex flex-col gap-5">
         <div>
           <h1 className="block text-xl font-semibold text-gray-800 mb-8">
-            Hola, ¿cómo te llamas?
+            El último paso conectar contigo
           </h1>
           <label
             htmlFor="name"
@@ -55,12 +56,19 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
           />
         </div>
       </div>
-      <div className="flex justify-end">
+      <div className="flex justify-between">
+        <button
+          type="button"
+          onClick={onBack}
+          className="bg-gray-200 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition duration-200"
+        >
+          Atrás
+        </button>
         <button
           type="submit"
-          className="w-max bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200"
+          className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200"
         >
-          Continuar
+          Enviar
         </button>
       </div>
     </form>

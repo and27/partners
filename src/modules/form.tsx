@@ -39,12 +39,12 @@ export default function Home() {
       </p>
       <div className="flex flex-col bg-white p-8 rounded-xl shadow-xl w-full max-w-lg h-[55vh] overflow-y-auto">
         {step < 4 && <ProgressDots currentStep={step} />}
-        {step === 1 && <Step1 onNext={handleNextStep} />}
+        {step === 1 && <Step2 onNext={handleNextStep} />}
         {step === 2 && (
-          <Step2 onNext={handleNextStep} onBack={handlePreviousStep} />
+          <Step3 onNext={handleNextStep} onBack={handlePreviousStep} />
         )}
         {step === 3 && (
-          <Step3 onNext={handleNextStep} onBack={handlePreviousStep} />
+          <Step1 onNext={handleNextStep} onBack={handlePreviousStep} />
         )}
         {step > 3 && (
           <div className="text-center">
