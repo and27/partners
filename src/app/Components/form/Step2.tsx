@@ -25,7 +25,7 @@ const Step2: React.FC<Step2Props> = ({ onNext }) => {
           htmlFor="projectStage"
           className="block text-sm font-medium text-gray-700"
         >
-          ¿En qué etapa estás?
+          ¿En qué etapa te encuentras?
         </label>
         <select
           id="projectStage"
