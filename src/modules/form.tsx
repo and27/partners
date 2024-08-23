@@ -37,7 +37,7 @@ export default function Home() {
       <p className="text-blue-700 text-lg font-semibold px-3 py-1 rounded-lg tracking-widest mb-5">
         PARTNERS
       </p>
-      <div className="flex flex-col bg-white p-8 rounded-xl shadow-xl w-full max-w-lg h-[55vh] overflow-y-auto">
+      <div className="flex flex-col bg-white p-8 rounded-xl md:shadow-xl w-full max-w-lg h-[55vh] overflow-y-auto">
         {step < 4 && <ProgressDots currentStep={step} />}
         {step === 1 && <Step2 onNext={handleNextStep} />}
         {step === 2 && (

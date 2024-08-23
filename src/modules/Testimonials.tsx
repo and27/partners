@@ -23,7 +23,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="bg-neutral-200 text-neutral-800 p-5 pt-[4rem] pb-[8rem] max-w-[1280px] mx-auto text-center">
+    <section className="bg-neutral-200 text-neutral-800 px-5 py-20 md:py-[9rem] max-w-[1280px] mx-auto text-center">
       <h2 className="text-3xl font-bold pb-[4rem] text-neutral-800">
         Para gente que quiere cambiar el mundo
       </h2>

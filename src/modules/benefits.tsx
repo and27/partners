@@ -24,9 +24,9 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <section className="bg-neutral-100 text-neutral-800 p-5 pt-[12rem] pb-[8rem] text-center">
+    <section className="bg-neutral-100 text-neutral-800 p-5 py-10 md:py-[9rem] text-center">
       <h1 className="text-3xl font-bold mb-16">Partners te ofrece</h1>
-      <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-5">
         {benefits.map((benefit) => (
           <div
             key={benefit.title}

@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
-    <section className="relative bg-neutral-200 text-neutral-800 p-5">
-      <div className="bg-neutral-200 text-neutral-800 p-5 pt-[4rem] pb-[8rem] max-w-[50%] mx-auto flex flex-col items-center gap-5 text-center">
+    <section className="relative bg-neutral-200 text-neutral-800">
+      <div className="bg-neutral-200 text-neutral-800 px-5  py-20 md:py-[9rem] lg:max-w-[70%] xl:max-w-[50%] mx-auto flex flex-col items-center gap-5 text-center">
         <h1 className="text-3xl font-bold">¿Qué es Partners?</h1>
         <p>
           Partners es una app que conecta emprendedores en etapas tempranas con
@@ -9,8 +9,8 @@ const Hero = () => {
           perfecto para que encuentres a esa persona que te ayudará a llevar tu
           proyecto al éxito.
         </p>
-        <div className="flex justify-center items-center space-x-8 mt-10">
-          <div className="w-1/2 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+          <div className="relative">
             <img
               src="person2.webp"
               alt="Persona 1"
@@ -25,7 +25,7 @@ const Hero = () => {
               </p>
             </div>
           </div>
-          <div className="w-1/2 relative">
+          <div className="relative">
             <img
               src="person1.webp"
               alt="Persona 2"
