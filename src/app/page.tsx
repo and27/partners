@@ -10,7 +10,7 @@ import DynamicWords from "./Components/DynamicWords";
 export default function Home() {
   return (
     <>
-      <main className="relative min-h-screen bg-neutral-200 text-neutral-800 p-5">
+      <main className="relative min-h-screen bg-neutral-200 text-neutral-800 p-5 overflow-hidden grid justify-center">
         <div
           className="absolute inset-[-10px] bg-cover bg-center z-0"
           style={{
@@ -18,7 +18,7 @@ export default function Home() {
             filter: "brightness(0.25) blur(2px)",
           }}
         ></div>
-        <div className="relative max-w-[1280px] mx-auto h-screen flex flex-col justify-center items-center gap-5 text-center z-10">
+        <div className="relative max-w-[1280px] mx-auto flex flex-col justify-center items-center gap-5 text-center z-10">
           <p className="text-white text-lg font-semibold px-3 py-1 rounded-lg tracking-widest">
             PARTNERS
           </p>

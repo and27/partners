@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const CtaModule = () => {
   return (
-    <section className="relative min-h-screen bg-neutral-200 text-neutral-800 p-5">
+    <section className="relative min-h-screen bg-neutral-200 text-neutral-800 p-5 overflow-hidden">
       <div
         className="absolute inset-[-10px] bg-cover bg-center z-0"
         style={{
