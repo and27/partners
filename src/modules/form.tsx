@@ -4,6 +4,7 @@ import Step1 from "@/app/Components/form/Step1";
 import Step2 from "@/app/Components/form/Step2";
 import Step3 from "@/app/Components/form/Step3";
 import ProgressDots from "@/app/Components/ProgressDots";
+import { addUserData } from "@/lib/supabaseDB";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -24,12 +25,19 @@ export default function Home() {
   });
 
   const handleNextStep = (data: Partial<FormData>) => {
+    console.log(data);
     setFormData((prev) => ({ ...prev, ...data }));
     setStep((prevStep) => prevStep + 1);
   };
 
   const handlePreviousStep = () => {
     setStep((prevStep) => Math.max(prevStep - 1, 1));
+  };
+
+  const handleSubmit = async (stepData: Partial<FormData>) => {
+    const userData = { ...formData, ...stepData };
+    await addUserData(userData);
+    setStep((prevStep) => prevStep + 1);
   };
 
   return (
@@ -44,7 +52,7 @@ export default function Home() {
           <Step3 onNext={handleNextStep} onBack={handlePreviousStep} />
         )}
         {step === 3 && (
-          <Step1 onNext={handleNextStep} onBack={handlePreviousStep} />
+          <Step1 onNext={handleSubmit} onBack={handlePreviousStep} />
         )}
         {step > 3 && (
           <div className="text-center">
